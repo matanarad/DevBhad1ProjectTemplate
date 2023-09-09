@@ -49,6 +49,7 @@
     <div class="container">
         <script>    
             // JavaScript to handle form submission and send POST request
+                document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('project-form').addEventListener('submit', function (e) {
     e.preventDefault(); // Prevent the default form submission behavior
 
@@ -78,7 +79,7 @@ document.getElementById('project-form').addEventListener('submit', function (e) 
         console.error('Error:', error);
     });
 });
-
+            });
         </script>
 
         <h1>Project Information</h1>
