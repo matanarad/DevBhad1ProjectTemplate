@@ -47,6 +47,38 @@
 </head>
 <body>
     <div class="container">
+        <script>
+    // JavaScript to handle form submission and send POST request
+    document.getElementById('project-form').addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the default form submission behavior
+
+        // Get form data
+        const formData = new FormData(this);
+
+        // Specify your backend URL (localhost:8000) here
+        const backendUrl = 'http://localhost:8000'; // Replace with your actual backend URL
+
+        // Send a POST request to the backend
+        fetch(backendUrl, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            if (response.ok) {
+                // Handle a successful response, e.g., display a success message
+                console.log('Form submitted successfully');
+            } else {
+                // Handle errors, e.g., display an error message
+                console.error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            // Handle network or other errors
+            console.error('Error:', error);
+        });
+    });
+</script>
+
         <h1>Project Information</h1>
         <form action="submit_action.php" method="POST"> <!-- Replace "submit_action.php" with your form submission URL -->
             <div class="form-group">
