@@ -22,7 +22,6 @@ function MainForm() {
 
         // Split the date string into an array
         const hebrewDateArray = hebrewDateStr.split(' ');
-        console.log(hebrewDateArray)
         // Set the Hebrew date in the state
         // setHebrewDate(hebrewDateArray.join(' '));
     }, []);
@@ -30,7 +29,6 @@ function MainForm() {
     useEffect(() => {
         if (isLoading) {
             const interval = setInterval(() => {
-                console.log("asd")
                 setDots((prevDots) => {
                     return prevDots === '...' ? '' : prevDots + '.';
                 });
@@ -71,24 +69,12 @@ function MainForm() {
             })
                 .then((response) => {
                     setIsLoading(false);
-                    console.log(response)
-                    window.open(response.data, '_blank');
+                    window.location.href = response.data;
                 })
                 .catch((error) => {
                     setIsLoading(false);
                 });
-            // axios
-            //     .post(scriptUrl, formData, {
-            //         headers: {
-            //             'Content-Type': 'multipart/form-data', // Important for FormData
-            //         },
-            //     })
-            //     .then((response) => {
-            //         console.log(response.data)
-            //     })
-            //     .catch((error) => {
-            //         console.error('Error:', error);
-            //     });
+
 
         } catch (error) {
             console.error('An error occurred while converting to PDF.');

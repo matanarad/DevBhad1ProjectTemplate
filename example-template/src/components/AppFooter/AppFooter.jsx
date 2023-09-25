@@ -1,5 +1,4 @@
 import './AppFooter.css';
-import { useEffect, useState } from 'react';
 import BroshLogo from '../../img/BroshLogo.png'
 import Bhad1Logo from '../../img/Bhad1Logo.png'
 
@@ -8,7 +7,7 @@ function AppFooter() {
         <footer className="footer">
             <div className="left">
                 <div className="image-container">
-                    <img src={Bhad1Logo} alt="Image 2" />
+                    <img src={Bhad1Logo} alt={Bhad1Logo} />
 
                 </div>
             </div>
@@ -18,7 +17,7 @@ function AppFooter() {
             </div>
             <div className="right">
                 <div className="image-container">
-                    <img src={BroshLogo} alt="Image 1" />
+                    <img src={BroshLogo} alt={BroshLogo} />
                 </div>
             </div>
         </footer>
