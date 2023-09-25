@@ -1,0 +1,16 @@
+.footer {
+    background-color: #45526E;
+    padding: 10px;
+    color: white;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 15vw;
+}

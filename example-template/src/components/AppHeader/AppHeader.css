@@ -1,0 +1,11 @@
+.header {
+    background-color: #45526E;
+    text-align: center;
+}
+
+.logo-container img {
+    max-height: 5vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+}
